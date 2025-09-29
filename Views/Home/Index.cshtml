@@ -1,8 +1,124 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/LayoutLanding.cshtml";
+    ViewData["Title"] = "Landing Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="content">
+    <div class="container-fluid">
+
+        <!-- Row 1: Quick Stats -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card bg-info text-white shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-users fa-2x mb-2"></i>
+                        <h5>Users</h5>
+                        <h3>3,245</h3>
+                        <p class="mb-0">Active this month</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card bg-success text-white shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-dollar-sign fa-2x mb-2"></i>
+                        <h5>Revenue</h5>
+                        <h3>$12,480</h3>
+                        <p class="mb-0">This quarter</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card bg-warning text-dark shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shopping-cart fa-2x mb-2"></i>
+                        <h5>Orders</h5>
+                        <h3>820</h3>
+                        <p class="mb-0">In progress</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card bg-danger text-white shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-exclamation-triangle fa-2x mb-2"></i>
+                        <h5>Alerts</h5>
+                        <h3>12</h3>
+                        <p class="mb-0">Need attention</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Chart + Progress -->
+        <div class="row">
+            <div class="col-lg-6 mb-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">Sales Overview</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Monthly performance (dummy chart area)</p>
+                        <div class="bg-light border rounded text-center p-5">[ Chart Here ]</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="card-title mb-0">Project Progress</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Website Redesign</p>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-info" style="width: 75%">75%</div>
+                        </div>
+                        <p>Mobile App</p>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-warning" style="width: 40%">40%</div>
+                        </div>
+                        <p>Server Migration</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width: 20%">20%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3: Tasks + Notifications -->
+        <div class="row">
+            <div class="col-lg-6 mb-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="card-title mb-0">Task List</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="fas fa-check text-success"></i> Update user profiles</li>
+                            <li class="list-group-item"><i class="fas fa-clock text-warning"></i> Fix checkout page</li>
+                            <li class="list-group-item"><i class="fas fa-times text-danger"></i> Resolve login bug</li>
+                            <li class="list-group-item"><i class="fas fa-plus text-primary"></i> Add new analytics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="card-title mb-0">Notifications</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-primary">New user registered</div>
+                        <div class="alert alert-success">Server running smoothly</div>
+                        <div class="alert alert-warning">Payment gateway delayed</div>
+                        <div class="alert alert-danger">High CPU usage detected</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.container-fluid -->
 </div>
+
+

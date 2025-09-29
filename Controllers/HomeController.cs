@@ -13,6 +13,10 @@ namespace dotnet_mvc_first_app.Controllers
             _logger = logger;
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();
@@ -24,6 +28,10 @@ namespace dotnet_mvc_first_app.Controllers
         }
 
         public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Profile()
         {
             return View();
         }
