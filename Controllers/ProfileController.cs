@@ -4,9 +4,8 @@ namespace dotnet_mvc_first_app.Controllers
 {
     public class ProfileController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Profile()
         {
-            ViewBag.Title = "Profile";
             return View();
         }
     }
