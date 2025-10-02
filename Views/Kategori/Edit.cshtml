@@ -1,0 +1,49 @@
+﻿@model Kategori
+@{
+    ViewData["Title"] = "Tambah Kategori";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <h1>Tambah Kategori</h1>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <form asp-action="Edit" method="post">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Tipe</label>
+                        <select asp-for="Tipe" class="form-control">
+                            <option value="">-- Pilih Tipe --</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+                    <input asp-for="Id" type="hidden" />
+                    <div class="form-group">
+                        <label>Nama</label>
+                        <input asp-for="Nama" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Deskripsi</label>
+                        <textarea asp-for="Deskripsi" class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select asp-for="Status" class="form-control">
+                            <option value="active">Active</option>
+                            <option value="not active">Not Active</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <a href="@Url.Action("Index")" class="btn btn-secondary">Batal</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
