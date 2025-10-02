@@ -1,51 +1,61 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewData["Title"]</title>
+
+    <!-- Base tag untuk fix relative path -->
     <base href="~/adminlte/">
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <style>
-        html, body {
-            height: 100%;
-        }
 
-        .wrapper {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+    <!-- AdminLTE CSS dengan path relatif -->
+    <link rel="stylesheet" href="~/adminLTE/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="~/adminLTE/dist/css/adminlte.min.css">
 
-        .content-wrapper {
-            flex: 1;
-        }
-    </style>
 </head>
 <body class="hold-transition layout-top-nav">
     <div class="wrapper">
 
-        <!-- Navbar -->
-        @await Html.PartialAsync("_Navbar")
+        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
 
-        <!-- Content Wrapper -->
-        <div class="content-wrapper">
-            @RenderBody()
-        </div>
+            <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Index" class="nav-link">Dashboard</a>
+                    </li>
 
-        <!-- Footer Anda -->
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-inline">
-                Anything you want
+                    <li class="nav-item">
+                        <a asp-controller="Profile" asp-action="Profile" class="nav-link">Profil</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a asp-controller="Kategori" asp-action="Index" class="nav-link">Kategori</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Login" class="nav-link">Logout</a>
+                    </li>
+
+
+                </ul>
             </div>
-            <strong>Pratikum MVC, Halaman @ViewData["Title"] <a href="https://adminlte.io">Agas29</a></strong> Anggoro
-        </footer>
+
+        </nav>
+
+        <main class="container-fluid">
+            @RenderBody()
+        </main>
 
     </div>
-
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <script src="dist/js/adminlte.min.js"></script>
-    @RenderSection("Scripts", required: false)
 </body>
+
+<!-- Footer Anda -->
+<footer class="main-footer">
+    <div class="float-right d-none d-sm-inline">
+        Anything you want
+    </div>
+    <strong>Pratikum MVC, Halaman @ViewData["Title"] <a href="https://adminlte.io">Agas29</a></strong> Anggoro
+</footer>
+
 </html>
